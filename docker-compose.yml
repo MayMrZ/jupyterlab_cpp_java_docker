@@ -1,0 +1,15 @@
+version: '3.1'
+services:
+  jupyterlab:
+    image: maymrz/jupyterlab_cpp_java
+    restart: "always"
+    container_name: jupyter
+    ports:
+      - 8888:8888
+    environment:
+      - "JUPYTER_ENABLE_LAB=yes"
+      - "RESTARTABLE=yes"
+    command: start-notebook.sh --NotebookApp.password='sha1:19103c515716:b868e08920bace6862bd434242d7cc5b38dcd1a1'
+    volumes:
+      - ./data:/home/jovyan/work
+
