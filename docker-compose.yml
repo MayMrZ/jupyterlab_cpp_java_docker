@@ -1,7 +1,7 @@
 version: '3.1'
 services:
   jupyterlab:
-    image: maymrz/jupyterlab_cpp_java
+    image: maymrz/jupyterlab_cpp_java:v1
     restart: "always"
     container_name: jupyter
     ports:
